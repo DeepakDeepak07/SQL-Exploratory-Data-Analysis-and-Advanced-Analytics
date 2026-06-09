@@ -1,64 +1,59 @@
-# 🚀 SQL Exploratory Data Analysis & Advanced Analytics Project
+<div align="center">
 
-## 📌 Project Overview
+# 🚀 SQL Exploratory Data Analysis & Advanced Analytics
 
-This project demonstrates a complete SQL analytics workflow, starting with database exploration and exploratory data analysis (EDA), then progressing into advanced analytical techniques and business reporting.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&pause=1000&color=00C2FF&center=true&vCenter=true&width=1000&lines=SQL+Exploratory+Data+Analysis;Advanced+SQL+Analytics;Customer+%26+Product+Reporting;Business+Intelligence+with+SQL+Server" />
 
-Using SQL Server and T-SQL, the project transforms raw sales data into actionable business insights through customer analytics, product analytics, segmentation, trend analysis, and performance reporting.
+<p align="center">
+<img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white"/>
+<img src="https://img.shields.io/badge/T--SQL-025E8C?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Data_Analytics-FF6F00?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Business_Intelligence-4CAF50?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/EDA-6A1B9A?style=for-the-badge"/>
+</p>
 
-The project follows a structured analytics lifecycle used by professional data analysts and business intelligence teams.
-
----
-
-## 🎯 Project Objectives
-
-The primary goals of this project are to:
-
-* Explore and understand a relational database structure
-* Perform Exploratory Data Analysis (EDA)
-* Analyze customer and product behavior
-* Measure business performance over time
-* Identify top-performing products and customers
-* Build reusable analytical reports
-* Demonstrate advanced SQL analytical techniques
+</div>
 
 ---
 
-# 🏗️ Database Architecture
+# 📖 Project Overview
 
-The project uses a Star Schema design consisting of:
+This project demonstrates a complete SQL analytics workflow beginning with database exploration and Exploratory Data Analysis (EDA), followed by advanced analytical techniques used by Data Analysts, Business Analysts, and Business Intelligence professionals.
 
-### Fact Table
+The project leverages SQL Server and T-SQL to transform transactional sales data into actionable business insights through:
 
-| Table      | Description                        |
-| ---------- | ---------------------------------- |
-| fact_sales | Stores transactional sales records |
-
-### Dimension Tables
-
-| Table         | Description                           |
-| ------------- | ------------------------------------- |
-| dim_customers | Customer information and demographics |
-| dim_products  | Product attributes and hierarchy      |
-
-### Reporting Views
-
-| View             | Description                                  |
-| ---------------- | -------------------------------------------- |
-| report_customers | Customer performance and segmentation report |
-| report_products  | Product performance and segmentation report  |
+* Database Exploration
+* Exploratory Data Analysis (EDA)
+* Trend Analysis
+* Customer Analytics
+* Product Analytics
+* Segmentation Analysis
+* Performance Analysis
+* Business Reporting
 
 ---
 
-# 📂 Project Structure
+# 🗺️ Project Roadmap
+
+<p align="center">
+<img src="./docs/Project%20Roadmap.png" width="100%">
+</p>
+
+---
+
+# 🏗️ Project Architecture
 
 ```text
 SQL-Exploratory-Data-Analysis-and-Advanced-Analytics
 │
-├── datasets/
-│   └── csv-files/
+├── datasets
+│   ├── flat-files
+│   └── DataWarehouseAnalytics.bak
 │
-├── scripts/
+├── docs
+│   └── Project Roadmap.png
+│
+├── scripts
 │   ├── 00_init_database.sql
 │   ├── 01_database_exploration.sql
 │   ├── 02_dimensions_exploration.sql
@@ -74,262 +69,206 @@ SQL-Exploratory-Data-Analysis-and-Advanced-Analytics
 │   ├── 12_report_customers.sql
 │   └── 13_report_products.sql
 │
-├── images/
-│
 └── README.md
 ```
 
 ---
 
-# 🔍 Exploratory Data Analysis (EDA)
+# 📂 SQL Scripts
 
-EDA is performed to understand the structure, quality, and characteristics of the dataset before conducting deeper business analysis.
+## Database Setup
 
-## 1️⃣ Database Exploration
+<table>
+<tr>
+<td>
 
-Investigates database objects and structure.
+### 🛠 Initialization
 
-### Analysis Includes
+<a href="./scripts/00_init_database.sql">
 
-* Tables and schemas
-* Fact and dimension relationships
-* Dataset structure
+<img src="https://img.shields.io/badge/Open_SQL_Script-00_init_database-blue?style=for-the-badge"/>
 
----
+</a>
 
-## 2️⃣ Dimensions Exploration
+Creates:
 
-Examines categorical attributes within the business.
+* Database
+* Gold Schema
+* Fact Table
+* Dimension Tables
+* Bulk Data Loading
 
-### Analysis Includes
-
-* Customer countries
-* Product categories
-* Product subcategories
-* Product catalog structure
-
----
-
-## 3️⃣ Date Range Exploration
-
-Analyzes historical coverage of the dataset.
-
-### Analysis Includes
-
-* First order date
-* Last order date
-* Order history duration
-* Customer age distribution
+</td>
+</tr>
+</table>
 
 ---
 
-## 4️⃣ Measures Exploration
+## Exploratory Data Analysis (EDA)
 
-Calculates core business metrics.
+<table>
+<tr>
+<td>
 
-### KPIs Generated
+### 🔍 Database Exploration
 
-* Total Sales
-* Total Orders
-* Total Customers
-* Total Products
-* Total Quantity Sold
-* Average Selling Price
+<a href="./scripts/01_database_exploration.sql">
+<img src="https://img.shields.io/badge/View_Query-01_database_exploration-success?style=for-the-badge"/>
+</a>
 
----
+</td>
 
-## 5️⃣ Magnitude Analysis
+<td>
 
-Measures business volume across dimensions.
+### 📊 Dimensions Exploration
 
-### Analysis Includes
+<a href="./scripts/02_dimensions_exploration.sql">
+<img src="https://img.shields.io/badge/View_Query-02_dimensions_exploration-success?style=for-the-badge"/>
+</a>
 
-* Revenue by category
-* Revenue by customer
-* Customer distribution by country
-* Product distribution by category
-* Sales volume by country
+</td>
+</tr>
 
----
+<tr>
+<td>
 
-## 6️⃣ Ranking Analysis
+### 📅 Date Range Exploration
 
-Identifies top and bottom performers.
+<a href="./scripts/03_date_range_exploration.sql">
+<img src="https://img.shields.io/badge/View_Query-03_date_range_exploration-success?style=for-the-badge"/>
+</a>
 
-### Analysis Includes
+</td>
 
-* Top revenue-generating products
-* Lowest-performing products
-* Highest-value customers
-* Customers with the fewest orders
+<td>
 
-### SQL Concepts
+### 📈 Measures Exploration
 
-* TOP
-* RANK()
-* Window Functions
+<a href="./scripts/04_measures_exploration.sql">
+<img src="https://img.shields.io/badge/View_Query-04_measures_exploration-success?style=for-the-badge"/>
+</a>
 
----
+</td>
+</tr>
 
-# 📈 Advanced SQL Analytics
+<tr>
+<td>
 
-After EDA, advanced analytics techniques are applied to uncover deeper business insights.
+### 📦 Magnitude Analysis
 
----
+<a href="./scripts/05_magnitude_analysis.sql">
+<img src="https://img.shields.io/badge/View_Query-05_magnitude_analysis-success?style=for-the-badge"/>
+</a>
 
-## 7️⃣ Change Over Time Analysis
+</td>
 
-Analyzes business performance across time periods.
+<td>
 
-### Metrics
+### 🏆 Ranking Analysis
 
-* Monthly Sales
-* Monthly Customers
-* Monthly Quantities Sold
+<a href="./scripts/06_ranking_analysis.sql">
+<img src="https://img.shields.io/badge/View_Query-06_ranking_analysis-success?style=for-the-badge"/>
+</a>
 
-### SQL Concepts
-
-* YEAR()
-* MONTH()
-* DATETRUNC()
-* FORMAT()
-
----
-
-## 8️⃣ Cumulative Analysis
-
-Calculates running totals and cumulative business performance.
-
-### Examples
-
-* Running Revenue
-* Running Orders
-* Running Quantity Sold
-
-### SQL Concepts
-
-* Window Aggregates
-* SUM() OVER()
+</td>
+</tr>
+</table>
 
 ---
 
-## 9️⃣ Performance Analysis
+## Advanced SQL Analytics
 
-Compares current performance against historical benchmarks.
+<table>
+<tr>
+<td>
 
-### Analysis Includes
+### 📈 Change Over Time
 
-* Year-over-Year Growth
-* Previous Year Comparisons
-* Product Performance Trends
+<a href="./scripts/07_change_over_time_analysis.sql">
+<img src="https://img.shields.io/badge/View_Query-07_change_over_time_analysis-orange?style=for-the-badge"/>
+</a>
 
-### SQL Concepts
+</td>
 
-* LAG()
-* AVG() OVER()
-* CASE Statements
+<td>
 
----
+### 📊 Cumulative Analysis
 
-## 🔟 Data Segmentation
+<a href="./scripts/08_cumulative_analysis.sql">
+<img src="https://img.shields.io/badge/View_Query-08_cumulative_analysis-orange?style=for-the-badge"/>
+</a>
 
-Groups customers and products into meaningful business segments.
+</td>
+</tr>
 
-### Product Segments
+<tr>
+<td>
 
-* Below 100
-* 100–500
-* 500–1000
-* Above 1000
+### ⚡ Performance Analysis
 
-### Customer Segments
+<a href="./scripts/09_performance_analysis.sql">
+<img src="https://img.shields.io/badge/View_Query-09_performance_analysis-orange?style=for-the-badge"/>
+</a>
 
-* VIP
-* Regular
-* New
+</td>
 
----
+<td>
 
-## 1️⃣1️⃣ Part-to-Whole Analysis
+### 🎯 Data Segmentation
 
-Measures contribution percentages across business categories.
+<a href="./scripts/10_data_segmentation.sql">
+<img src="https://img.shields.io/badge/View_Query-10_data_segmentation-orange?style=for-the-badge"/>
+</a>
 
-### Analysis Includes
+</td>
+</tr>
 
-* Category contribution to revenue
-* Percentage of total sales
+<tr>
+<td>
 
-### SQL Concepts
+### 🧩 Part-to-Whole Analysis
 
-* Window Functions
-* SUM() OVER()
-* Percentage Calculations
+<a href="./scripts/11_part_to_whole_analysis.sql">
+<img src="https://img.shields.io/badge/View_Query-11_part_to_whole_analysis-orange?style=for-the-badge"/>
+</a>
 
----
-
-# 📊 Customer Analytics Report
-
-The Customer Report creates a reusable business view for customer intelligence.
-
-## Metrics Included
-
-* Customer Name
-* Customer Age
-* Age Group
-* Customer Segment
-* Total Orders
-* Total Sales
-* Total Quantity Purchased
-* Total Products Purchased
-* Customer Lifespan
-* Recency
-* Average Order Value
-* Average Monthly Spend
-
-### Customer Segments
-
-| Segment | Criteria                               |
-| ------- | -------------------------------------- |
-| VIP     | > €5,000 sales and ≥ 12 months history |
-| Regular | ≤ €5,000 sales and ≥ 12 months history |
-| New     | Less than 12 months history            |
+</td>
+</tr>
+</table>
 
 ---
 
-# 📦 Product Analytics Report
+## Business Reporting
 
-The Product Report creates a reusable business view for product intelligence.
+<table>
+<tr>
+<td>
 
-## Metrics Included
+### 👥 Customer Report
 
-* Product Name
-* Category
-* Subcategory
-* Cost
-* Product Segment
-* Total Orders
-* Total Revenue
-* Total Quantity Sold
-* Total Customers
-* Product Lifespan
-* Recency
-* Average Selling Price
-* Average Order Revenue
-* Average Monthly Revenue
+<a href="./scripts/12_report_customers.sql">
+<img src="https://img.shields.io/badge/View_Report-Customer_Analytics-blueviolet?style=for-the-badge"/>
+</a>
 
-### Product Segments
+</td>
 
-| Segment        | Criteria                          |
-| -------------- | --------------------------------- |
-| High-Performer | Revenue > 50,000                  |
-| Mid-Range      | Revenue between 10,000 and 50,000 |
-| Low-Performer  | Revenue < 10,000                  |
+<td>
+
+### 📦 Product Report
+
+<a href="./scripts/13_report_products.sql">
+<img src="https://img.shields.io/badge/View_Report-Product_Analytics-blueviolet?style=for-the-badge"/>
+</a>
+
+</td>
+</tr>
+</table>
 
 ---
 
-# 🛠️ SQL Skills Demonstrated
+# 🧠 SQL Skills Demonstrated
 
-## Core SQL
+### Core SQL
 
 * SELECT
 * WHERE
@@ -338,7 +277,7 @@ The Product Report creates a reusable business view for product intelligence.
 * DISTINCT
 * CASE
 
-## Aggregate Functions
+### Aggregate Functions
 
 * SUM()
 * AVG()
@@ -346,7 +285,7 @@ The Product Report creates a reusable business view for product intelligence.
 * MIN()
 * MAX()
 
-## Date Functions
+### Date Functions
 
 * YEAR()
 * MONTH()
@@ -354,35 +293,72 @@ The Product Report creates a reusable business view for product intelligence.
 * DATETRUNC()
 * FORMAT()
 
-## Window Functions
+### Window Functions
 
 * RANK()
 * LAG()
 * SUM() OVER()
 * AVG() OVER()
 
-## Advanced Techniques
+### Advanced Techniques
 
 * Common Table Expressions (CTEs)
 * Customer Segmentation
 * Product Segmentation
+* Performance Benchmarking
 * Trend Analysis
-* Contribution Analysis
-* Business Reporting
+* Revenue Contribution Analysis
 
 ---
 
-# 🎓 Skills Demonstrated
+# 📊 Database Model
 
-* Exploratory Data Analysis (EDA)
-* Business Analytics
-* Customer Analytics
-* Product Analytics
-* SQL Reporting
-* KPI Development
-* Data Modeling
-* Star Schema Concepts
-* SQL Server Development
-* Analytical Thinking
+### Fact Table
+
+* fact_sales
+
+### Dimension Tables
+
+* dim_customers
+* dim_products
+
+### Reporting Views
+
+* report_customers
+* report_products
 
 ---
+
+# 🎯 Key Business Questions Answered
+
+✅ Who are the highest-value customers?
+
+✅ Which products generate the most revenue?
+
+✅ Which categories contribute most to overall sales?
+
+✅ How does revenue change over time?
+
+✅ Which products are underperforming?
+
+✅ How should customers be segmented?
+
+✅ What percentage of sales comes from each category?
+
+---
+
+<div align="center">
+
+## 📬 Contact
+
+### Deepak Mahey
+
+📧 [Deepak.372558@gmail.com](mailto:Deepak.372558@gmail.com)
+
+💼 LinkedIn: https://www.linkedin.com/in/deepak070/
+
+⭐ If you found this project useful, consider starring the repository.
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=150&section=footer"/>
+
+</div>
